@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.chenpengfei.android.scrolltitle.CustomScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollview">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#e6e6e6"
+            android:orientation="vertical">
+
+            <!-- 菜品图片 -->
+            <com.chenpengfei.android.scrolltitle.ProportionImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageview_id"
+                android:background="@drawable/dan"/>
+
+            <!-- 菜品名字和销售数量-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:id="@+id/dishes_sale_count_LinearLayout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="17dp"
+                    android:paddingLeft="15dp"
+                    android:text="蛋炒饭"
+                    android:textColor="#333333"
+                    android:background="@android:color/white"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@android:color/white"
+                    android:text="月售10份"
+                    android:textColor="#cccccc"
+                    android:textSize="10sp"/>
+            </LinearLayout>
+
+            <!-- 价格-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="@android:color/white"
+                android:text="26"
+                android:textColor="#ffff4444"
+                android:textStyle="bold"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="5dp"
+                android:background="#6633B5E5"
+                android:textColor="#e6e6e6"
+                android:textStyle="bold"
+                android:text="我是评论区域"
+                android:gravity="center"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </com.chenpengfei.android.scrolltitle.CustomScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- title -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#4876FF"
+            android:id="@+id/title_linearlayout_id"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_actionbar_back"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                />
+
+            <com.chenpengfei.android.scrolltitle.TitleTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="17dp"
+                android:text="蛋炒饭"
+                android:textColor="@android:color/white"
+                android:visibility="invisible"
+                android:textSize="16sp"
+                android:id="@+id/title_dishes_id"
+                />
+        </LinearLayout>
+
+        <!-- 菜单价格-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@android:color/white"
+            android:text="26"
+            android:id="@+id/price"
+            android:textColor="#ffff4444"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</RelativeLayout>
